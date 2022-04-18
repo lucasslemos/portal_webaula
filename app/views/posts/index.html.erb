@@ -1,6 +1,14 @@
 <p style="color: green">
   <%= notice %>
 </p>
+
+<%= search_form_for @q do |f| %>
+  <%= f.label :title_cont %>
+  <%= f.search_field :title_cont %>
+
+  <%= f.submit "search" %>
+<% end %>
+                        
 <div id="posts">
   <% @posts.each do |post| %>
     <div class="card">
